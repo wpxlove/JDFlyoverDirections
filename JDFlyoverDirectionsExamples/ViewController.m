@@ -108,16 +108,15 @@
     {
         return;
     }
-    {
+    
     MKMapCamera* nextCamera = [mapCameras firstObject];
-    [mapCameras removeObjectAtIndex:0];
-    [UIView animateWithDuration:10.0
-                          delay:0.0
-                        options:UIViewAnimationOptionCurveEaseInOut
-                     animations:^{
-                         self.mapView.camera = nextCamera;
-                     } completion:NULL];
-    }
+       [mapCameras removeObjectAtIndex:0];
+       [UIView animateWithDuration:10.0
+                             delay:0.0
+                           options:UIViewAnimationOptionCurveEaseInOut
+                        animations:^{
+                            self.mapView.camera = nextCamera;
+                        } completion:NULL];
 }
 
 -(void)flyWithPolyline:(MKRoute *)route{
